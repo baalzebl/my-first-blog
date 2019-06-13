@@ -1,10 +1,10 @@
-{% load static %}
+
 <html>
     <head>
         <title>Django Girls blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="/static/css/blog.css">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -14,18 +14,15 @@
        <div class="content container">
            <div class="row">
                <div class="col-md-8">
-                   {% extends 'blog/base.html %}
-                   {% block content %}
-                        {% for post in posts %}
+                    
+                        <div class="post">
                             <div class="post">
-                                <div class="post">
-                                    <p>published: {{ post.published_date }}</p>
-                                </div>
-                                <h1><a href="{% url 'post_detail' pk = post.pk %}">{{ post.title }}</a></h1>
-                                <p>{{ post.text|linebreaksbr }}</p>
+                                <p>published: 2019년 6월 12일 11:44 오후</p>
                             </div>
-                        {% endfor %}
-                   {% endblock%}
+                            <h1><a href="">Sample title</a></h1>
+                            <p>Test</p>
+                        </div>
+                    
                </div>
            </div>
         </div>
